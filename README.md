@@ -13,6 +13,8 @@ First, [create two Globus shares](https://docs.globus.org/how-to/share-files/), 
 for the UOCloud storage and one for the Talapas storage. The shares have to be shared with
 the identity associated with the `uocloud_sync` app, b2e31a30-19bb-4ac1-9617-6dcac0f6cff8@clients.auth.globus.org. Remember the "Share Display Name".
 
+Then a configuration file containing a Globus client ID and secret need to copied to where the app will run.
+
 Then, run `uocloud_sync`.
 
 ### Usage
