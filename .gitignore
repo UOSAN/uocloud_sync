@@ -144,3 +144,6 @@ static
 
 # PyCharm project files
 .idea/
+
+# Ignore application configuration file
+.cfg
