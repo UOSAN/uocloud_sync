@@ -54,5 +54,11 @@ class UOCloudTransferClient:
         except TransferAPIError as e:
             print(str(e))
             sys.exit(1)
-        print(f'\tWaiting for transfer to complete with task_id: {task["task_id"]}')
-        self._transfer_client.task_wait(task_id=task['task_id'], timeout=60, polling_interval=60)
+        task_id = task['task_id']
+        print(f'\tWaiting for transfer to complete with task_id: {task_id}')
+        while not self._transfer_client.task_wait(task_id=task_id, timeout=3600, polling_interval=60):
+            print('.', end='')
+
+        print('Transferred files:')
+        for info in self._transfer_client.task_successful_transfers(task_id=task_id, num_results=None):
+            print("\t{} -> {}".format(info["source_path"], info["destination_path"]))
