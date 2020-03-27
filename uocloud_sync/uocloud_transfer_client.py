@@ -22,8 +22,7 @@ class UOCloudTransferClient:
         self._dest_endpoint = None
 
     def get_endpoint_id(self, endpoint_name: str):
-        kwargs = {}
-        endpoints = self._transfer_client.endpoint_search(filter_fulltext=endpoint_name, **kwargs)
+        endpoints = self._transfer_client.endpoint_search(filter_fulltext=endpoint_name)
         # Just return the first result. Hope it is right!
         for ep in endpoints:
             return ep['id']
