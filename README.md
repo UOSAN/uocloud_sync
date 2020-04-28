@@ -1,5 +1,6 @@
 # UOCloud sync
 [![Build Status](https://travis-ci.com/UOSAN/uocloud_sync.svg?branch=master)](https://travis-ci.com/UOSAN/uocloud_sync)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e6648afa0e354a67b8a556a2baf0b797)](https://www.codacy.com/gh/UOSAN/uocloud_sync?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=UOSAN/uocloud_sync&amp;utm_campaign=Badge_Grade)
 
 Transfer files from UOCloud provisionable storage to Talapas, via Globus.
 
@@ -24,7 +25,7 @@ Then, run `uocloud_sync`.
 uocloud_sync.py --src SRC_SHARE:PATH --dest DEST_SHARE:PATH
 ```
 - `SRC_SHARE` is the name of the source Globus endpoint to copy from. For example, "SANLab Warm Storage".
-- `PATH` is the source directory to copy. For example
+- `PATH` is the source directory to copy. For example, "/Devaluation".
 - `DEST_SHARE` is the name of the destination Globus endpoint to copy to. For example, "SANLab Talapas share". This share points to /projects/sanlab/shared on Talapas.
 - `PATH` is the destination directory name.
 
