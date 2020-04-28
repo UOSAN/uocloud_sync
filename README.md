@@ -24,13 +24,13 @@ Then, run `uocloud_sync`.
 ```
 uocloud_sync.py --src SRC_SHARE:PATH --dest DEST_SHARE:PATH
 ```
-- `SRC_SHARE` is the name of the source Globus endpoint to copy from. For example, "SANLab Warm Storage".
-- `PATH` is the source directory to copy. For example, "/Devaluation".
-- `DEST_SHARE` is the name of the destination Globus endpoint to copy to. For example, "SANLab Talapas share". This share points to /projects/sanlab/shared on Talapas.
-- `PATH` is the destination directory name.
+  - `SRC_SHARE` is the name of the source Globus endpoint to copy from. For example, "SANLab Warm Storage".
+  - `PATH` is the source directory to copy. For example, "/Devaluation".
+  - `DEST_SHARE` is the name of the destination Globus endpoint to copy to. For example, "SANLab Talapas share". This share points to /projects/sanlab/shared on Talapas.
+  - `PATH` is the destination directory name.
 
 Example usage:
-- To transfer the `Devaluation\output` directory from UOCloud storage, to Talapas, creating a new directory in `/projects/sanlab/shared/Dev_temp`:
+  - To transfer the `Devaluation\output` directory from UOCloud storage, to Talapas, creating a new directory in `/projects/sanlab/shared/Dev_temp`:
 ```
 uocloud_sync.py --src "SANLab Warm Storage:/Devaluation/output" --dest "SANLab Talapas share:/Dev_temp"
 
