@@ -1,5 +1,6 @@
 # UOCloud sync
 [![Build Status](https://travis-ci.com/UOSAN/uocloud_sync.svg?branch=master)](https://travis-ci.com/UOSAN/uocloud_sync)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e6648afa0e354a67b8a556a2baf0b797)](https://www.codacy.com/gh/UOSAN/uocloud_sync?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=UOSAN/uocloud_sync&amp;utm_campaign=Badge_Grade)
 
 Transfer files from UOCloud provisionable storage to Talapas, via Globus.
 
