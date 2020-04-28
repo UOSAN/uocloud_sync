@@ -4,14 +4,14 @@
 
 Transfer files from UOCloud provisionable storage to Talapas, via Globus.
 
-### Motivation
+## Motivation
 Storage on Talapas is expensive, and UOCloud storage is cheaper, but it is a pain
 to transfer files from the cheaper storage using Globus because you first have
 to open the web app and authenticate, then start a transfer, then you get
 emailed sometime later when the transfer finishes. Wouldn't it be nice to have
 a program do that for you?
 
-### Setup
+## Setup
 First, [create two Globus shares](https://docs.globus.org/how-to/share-files/), one
 for the UOCloud storage and one for the Talapas storage. The shares have to be shared with
 the identity associated with the `uocloud_sync` app, b2e31a30-19bb-4ac1-9617-6dcac0f6cff8@clients.auth.globus.org. Remember the "Share Display Name".
@@ -20,7 +20,7 @@ Then a configuration file containing a Globus client ID and secret need to copie
 
 Then, run `uocloud_sync`.
 
-### Usage
+## Usage
 ```
 uocloud_sync.py --src SRC_SHARE:PATH --dest DEST_SHARE:PATH
 ```
@@ -42,9 +42,9 @@ uocloud_sync.py --src "SANLab Warm Storage:/Devaluation/output" --dest "SANLab T
     ...
 ```
 
-#### Use case
+### Use case
 In a slurm job, transparently copy data before analysis, perform the analysis, then copy the results to cheaper storage and clean up / delete on Talapas. For example, in a SBATCH script:
-```
+```Shell
 #!/bin/bash
 #SBATCH --account=dcnlab
 #SBATCH --partition=ctn
