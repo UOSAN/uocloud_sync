@@ -21,7 +21,7 @@ Then a configuration file containing a Globus client ID and secret need to copie
 Then, run `uocloud_sync`.
 
 ## Usage
-```
+```Shell
 uocloud_sync.py --src SRC_SHARE:PATH --dest DEST_SHARE:PATH
 ```
 - `SRC_SHARE` is the name of the source Globus endpoint to copy from. For example, "SANLab Warm Storage".
@@ -31,7 +31,7 @@ uocloud_sync.py --src SRC_SHARE:PATH --dest DEST_SHARE:PATH
 
 Example usage:
 - To transfer the `Devaluation\output` directory from UOCloud storage, to Talapas, creating a new directory in `/projects/sanlab/shared/Dev_temp`:
-```
+```Shell
 uocloud_sync.py --src "SANLab Warm Storage:/Devaluation/output" --dest "SANLab Talapas:/Dev_temp"
 
     Waiting for transfer to complete with task_id: fd1a44d2-6fb1-11ea-960e-0afc9e7dd773
